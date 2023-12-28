@@ -26,7 +26,7 @@ from sklearn.datasets import make_blobs
 #X = np.array([[1,3],[2,0],[13,14],[10,9]])
 #X = np.array([[0,0],[0,1],[0,5]]) 
 #X = np.array([[0,0],[1,0],[5,0]])
-X,y = make_blobs(n_samples = 1000, n_features = 2, centers = 2, cluster_std = 0.5)
+X,_ = make_blobs(n_samples = 1000, n_features = 2, centers = 2, cluster_std = 0.5)
 
 plt.scatter(X[:,0],X[:,1])
 plt.figure()
@@ -69,8 +69,8 @@ if ystd > xstd:
 
    zeros = np.zeros(len(C1))
    ones = np.ones(len(C2))
-   y = np.append(zeros,ones)
-   print(y)
+   ypred = np.append(zeros,ones)
+   print(ypred)
 if xstd > ystd:
     CordArg = np.argsort(xcord) 
     CordList = xcord[CordArg] # Array of datapoints
@@ -103,5 +103,5 @@ if xstd > ystd:
 
     zeros = np.zeros(len(C1))
     ones = np.ones(len(C2))
-    y = np.append(zeros,ones)
-    print(y)
+    ypred = np.append(zeros,ones)
+    print(ypred)
